@@ -1,0 +1,339 @@
+.navbar {
+    width: 100%; /* Full width of the viewport */
+    background: linear-gradient(45deg, #4f46e5, #7c3aed);
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between; /* Space between logo and theme toggle */
+    align-items: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+}
+
+.navbar-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.navbar-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.navbar-links li a:hover {
+    color: var(--accent-color);
+}
+
+/* Button with Icon */
+.button-with-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 1rem; /* Match the padding of the theme dropdown */
+    font-size: 1.25rem; /* Adjust font size for consistency */
+    font-weight: 600;
+    color: white;
+    background: linear-gradient(45deg,#e5464b, #ed3a58); /* Match the theme dropdown background */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px; /* Match the border radius of the theme dropdown */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+    text-decoration: none;
+    outline: none;
+}
+
+.button-with-icon:hover {
+    background: linear-gradient(45deg, #ca3838, #6b46c1); /* Match the hover effect of the theme dropdown */
+    transform: translateY(-4px);
+    box-shadow: 0 12px 15px rgba(0, 0, 0, 0.2);
+}
+
+.button-with-icon:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.button-with-icon .icon {
+    margin-right: 0.5rem; /* Add spacing between the icon and text */
+    width: 24px;
+    height: 24px;
+    transition: all 0.3s ease;
+}
+
+.theme-toggle {
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+    background: rgba(255, 255, 255, 0.4);
+    transform: translateY(-2px);
+}
+
+/* Theme Dropdown */
+.theme-dropdown {
+    position: relative;
+    display: inline-block;
+    margin-left: auto;
+}
+
+.theme-select {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ffffff;
+    background: linear-gradient(45deg, #4f46e5, #7c3aed);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    appearance: none; /* Remove default dropdown arrow */
+    outline: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .theme-dropdown .theme-select {
+    padding: 1rem 1rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #ffffff;
+    background: linear-gradient(45deg, hsl(354, 75%, 59%), hsl(358, 83%, 58%));
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    appearance: none;
+    outline: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.theme-select:hover {
+    background: linear-gradient(45deg, #4338ca, #6b46c1);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.theme-select:focus {
+    border-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.5);
+}
+
+.theme-select option {
+    background: #ffffff;
+    color: #333333;
+    font-weight: 600;
+}
+
+/* Add a custom dropdown arrow */
+.theme-dropdown::after {
+    content: "▼";
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+    font-size: 0.75rem;
+    color: #ffffff;
+    pointer-events: none;
+}
+
+/* Toggle Switch Styles */
+.switch {
+    --transition: 300ms;
+    --transition500: 500ms;
+    --color-dark: #0c0f14;
+    --color-darkGray: #21262e;
+    --color-gray: #52555a;
+    --color-offwhite: #cecece;
+    --shadow-color: var(--color-dark);
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 60px;
+    height: fit-content;
+    background-color: var(--color-dark);
+    border-radius: 30px;
+    padding: 4px;
+    transition: var(--transition500);
+    user-select: none;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.switch .svg {
+    transition: var(--transition);
+    position: absolute;
+    left: 5px;
+}
+
+.switch .moon {
+    width: 18px;
+    fill: var(--color-gray);
+    opacity: 1;
+}
+
+.switch .sun {
+    transform: translateY(-50%);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    left: calc(100% - 21.5px);
+    top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    scale: 0.8;
+    opacity: 0;
+}
+
+.switch .sun .dot {
+    position: relative;
+    display: block;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: white;
+    z-index: 1;
+    box-shadow: 11px 0px 0px var(--shadow-color),
+        10.3px 0px 0px var(--shadow-color), -11px 0px 0px var(--shadow-color),
+        -10.3px 0px 0px var(--shadow-color), 0px -11px 0px var(--shadow-color),
+        0px -10.3px 0px var(--shadow-color), 0px 11px 0px var(--shadow-color),
+        0px 10.3px 0px var(--shadow-color), 8px 8px 0px var(--shadow-color),
+        7.3px 7.3px 0px var(--shadow-color), 8px -8px 0px var(--shadow-color),
+        7.3px -7.3px 0px var(--shadow-color), -8px -8px 0px var(--shadow-color),
+        -7.3px -7.3px 0px var(--shadow-color), -8px 8px 0px var(--shadow-color),
+        -7.3px 7.3px 0px var(--shadow-color);
+}
+
+.switch .sun .dot::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: white;
+    border: 2px solid var(--color-dark);
+}
+
+.switch .circle {
+    appearance: none;
+    position: relative;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    left: 0;
+    background-color: var(--color-darkGray);
+    border: 1px solid var(--color-darkGray);
+    transition: var(--transition500);
+    box-shadow: 1px 1px 20px 3px var(--color-darkGray);
+}
+
+.switch:has(.circle:checked) {
+    background: var(--color-offwhite);
+}
+
+.switch .circle:hover {
+    margin-left: 3px;
+}
+
+.switch .circle:checked:hover {
+    margin-left: -3px;
+}
+
+.switch .circle:checked {
+    left: calc(100% - 24px);
+    background: white;
+    border-color: white;
+    box-shadow: 1px 1px 30px 12px white;
+}
+
+.switch:has(.circle:checked) > .sun {
+    opacity: 1;
+}
+
+.switch:has(.circle:checked) > .moon {
+    opacity: 0;
+}
+
+/* YouTube Button Styles */
+.youtube-button {
+    background: transparent;
+    position: relative;
+    padding: 5px 15px;
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    border: 1px solid rgb(244, 242, 242);
+    border-radius: 25px;
+    outline: none;
+    overflow: hidden;
+    color: rgb(239, 237, 237);
+    transition: color 0.3s 0.1s ease-out;
+    text-align: center;
+}
+
+.youtube-button span {
+    margin: 10px;
+}
+
+.youtube-button::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    content: "";
+    border-radius: 50%;
+    display: block;
+    width: 20em;
+    height: 20em;
+    left: -5em;
+    text-align: center;
+    transition: box-shadow 0.5s ease-out;
+    z-index: -1;
+}
+
+.youtube-button:hover {
+    color: rgb(255 0 0);
+    border: 1px solid rgb(255 0 0);
+}
+
+.youtube-button:hover::before {
+    box-shadow: inset 0  10em rgb(255 0 0);
+}
+
+/* Right section for YouTube button and theme toggle */
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem; /* Add spacing between YouTube button and theme toggle */
+}

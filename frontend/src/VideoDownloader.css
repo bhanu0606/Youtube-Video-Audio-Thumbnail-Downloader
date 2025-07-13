@@ -1,0 +1,355 @@
+.downloader-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem; /* Increase padding */
+    background: #e5e8eb;
+    border-radius: 16px; /* Slightly larger border radius */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Slightly larger shadow */
+    max-width: 800px; /* Adjust maximum width */
+    margin: 0 auto;
+    border-color: #0a5faf;
+    border-style: groove;
+    width: 90%; /* Occupy 90% of the webpage width */
+    gap: 2rem; /* Add spacing between child elements */
+}
+
+.downloader-container:hover {
+    transform: translateY(-3px);
+    box-shadow: 50px 50px 50px rgba(5, 5, 5, 0.15);
+}
+
+.quality-options {
+    width: 100%; /* Occupy full width of the parent container */
+    padding: 1.5rem; /* Adjust padding */
+    background: #f8f9fa;
+    border-radius: 12px; /* Slightly smaller border radius */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adjust shadow */
+    text-align: center;
+}
+
+.quality-options h3 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.radio-group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 1rem; /* Space between options */
+    justify-content: center; /* Center the grid horizontally */
+    align-items: center; /* Center the grid vertically */
+    padding: 1.5rem; /* Increase padding */
+}
+
+.radio-group label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1rem;
+    background: #ffffff;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.radio-group label:hover {
+    background: #e9ecef;
+    border-color: #4f46e5;
+}
+
+.radio-group input[type="radio"] {
+    margin-right: 0.5rem;
+    width: 18px;
+    height: 18px;
+    accent-color: #4f46e5;
+}
+
+.radio-group label.selected {
+    background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+    color: white;
+    box-shadow: 0 4px 6px rgba(79, 70, 229, 0.2);
+}
+
+.download-btn {
+    padding: 2rem 4rem; /* Increase padding for a larger button */
+    background: #87ceeb; /* Sky blue color */
+    color: white;
+    border: none;
+    border-radius: 50px; /* Larger border radius for a rounded button */
+    font-size: 1.75rem; /* Increase font size */
+    font-weight: 700; /* Make the text bold */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 2rem; /* Add spacing above the button */
+    width: 70%; /* Occupy 70% of the container width */
+    max-width: 600px; /* Limit the maximum width */
+    text-align: center;
+}
+
+.downloader-container .download-btn {
+    padding: 2rem 4rem; /* Increase padding for a larger button */
+    background: #1841d5; /* Sky blue color */
+    color: white;
+    border: none;
+    border-radius: 50px; /* Larger border radius for a rounded button */
+    font-size: 1.75rem; /* Increase font size */
+    font-weight: 700; /* Make the text bold */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 2rem; /* Add spacing above the button */
+    width: 70%; /* Occupy 70% of the container width */
+    max-width: 600px; /* Limit the maximum width */
+    text-align: center;
+}
+
+.download-btn:hover {
+    background: hsl(235, 100%, 50%); /* Slightly darker sky blue on hover */
+    transform: translateY(-3px); /* Add hover effect */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+.download-btn:disabled {
+    background: #b0c4de; /* Light blue for disabled state */
+    cursor: not-allowed;
+    transform: none;
+}
+
+
+
+
+.status {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+.status.success {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.status.error {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.progress-bar {
+    width: 100%;
+    max-width: 400px;
+    height: 8px;
+    background: #e5e7eb;
+    border-radius: 4px;
+    margin: 1rem 0;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background: #4f46e5;
+    border-radius: 4px;
+    transition: width 0.3s ease;
+}
+
+.how-to-section {
+    margin-top: 3rem;
+    padding: 2rem;
+    background: #f8f9fa;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    width: 100%;
+    max-width: 800px;
+}
+
+.how-to-section h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.how-to-section ol,
+.how-to-section ul {
+    margin: 0;
+    padding: 0 1.5rem;
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.how-to-section li {
+    margin-bottom: 0.5rem;
+}
+
+.how-to-section ul li {
+    list-style-type: disc;
+}
+
+.fullscreen-section {
+    width: 90%; /* Full width of the viewport */
+    min-height: 100vh; /* Full height of the viewport */
+    padding: 2rem 0rem; /* Add padding for spacing */
+    background: linear-gradient(135deg, hwb(230 28% 10%), #3ac3ed); /* Gradient background */
+    color:black; /* White text for contrast */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    text-align: center;
+    /*box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+    border-radius: 16px; /* Rounded corners */
+    margin-top: 2rem; /* Add spacing above the section */
+}
+
+.fullscreen-section h3 {
+    font-size: 5rem; /* Larger font size for headings */
+    color: #ffffff; /* White text for headings */
+    margin-bottom: 2rem; /* Add spacing below the heading */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Add text shadow for better readability */
+}
+
+.fullscreen-section ol,
+.fullscreen-section ul {
+    margin: 0;
+    padding: 0 2rem;
+    color: #e0e7ff; /* Light text color for lists */
+    font-size: 1.5rem; /* Increase font size for readability */
+    line-height: 2; /* Add line height for better spacing */
+    text-align: left; /* Align text to the left */
+    max-width: 800px; /* Limit the width of the content */
+}
+
+.fullscreen-section li {
+    margin-bottom: 1rem; /* Add spacing between list items */
+    position: relative;
+    padding-left: 3rem; /* Add padding for the bullet icon */
+}
+
+.fullscreen-section li::before {
+    content: "✔"; /* Add a checkmark icon */
+    position: absolute;
+    left: 0;
+    color: #10b981; /* Green color for the icon */
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.fullscreen-section ul li {
+    list-style-type: none; /* Remove default bullet points */
+}
+
+.fullscreen-section a {
+    color: #10b981; /* Green color for links */
+    text-decoration:none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.fullscreen-section a:hover {
+    color: #059669; /* Darker green on hover */
+}
+
+.fullscreen-section .button {
+    margin-top: 2rem; /* Add spacing above the button */
+    padding: 1rem 2rem;
+    background: #10b981; /* Green background for the button */
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.25rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+}
+
+.fullscreen-section .button:hover {
+    background: #059669; /* Darker green on hover */
+    transform: translateY(-2px); /* Add hover effect */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Add hover shadow */
+}
+
+/* Download Button Styles */
+.button {
+  position: relative;
+  overflow: hidden;
+  height: 4.5rem;
+  padding: 0 2rem;
+  border-radius: 1.5rem;
+  background: #3d3a4e;
+  background-size: 400%;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 200%;
+  transition: all 0.3s ease;
+}
+
+.button:hover::before {
+  transform: scaleX(1);
+}
+
+.button-content {
+  position: relative;
+  z-index: 1;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  width: 100%;
+  height: inherit;
+  border-radius: inherit;
+  background: linear-gradient(
+    82.3deg,
+    rgba(150, 93, 233, 1) 10.8%,
+    rgba(99, 88, 238, 1) 94.3%
+  );
+  transition: all 0.475s;
+}
+
+.button:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+  transform: none;
+}
+
+@media (max-width: 768px) {
+    .downloader-container {
+        padding: 1.5rem;
+        width: 95%; /* Occupy 95% of the screen width */
+    }
+
+    .quality-options {
+        padding: 1rem;
+    }
+
+    .radio-group {
+        grid-template-columns: 1fr; /* Single column on smaller screens */
+    }
+
+    .radio-group label {
+        font-size: 1rem;
+        padding: 0.5rem 0.75rem;
+    }
+
+    .download-btn {
+        width: 100%; /* Occupy full width on smaller screens */
+        font-size: 1rem;
+        padding: 1rem 1.5rem;
+    }
+}

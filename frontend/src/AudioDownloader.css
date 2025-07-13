@@ -1,0 +1,256 @@
+.audio-downloader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    max-width: 800px;
+    margin: 0 auto;
+    width: 90%;
+    gap: 2rem;
+}
+
+.quality-options {
+    width: 100%;
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.quality-options h3 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.radio-group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    color: lab(0.17% 0.78 0.28);
+}
+
+.radio-group label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1rem;
+    background: #ffffff;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.radio-group label:hover {
+    background: #e9ecef;
+    border-color: #4f46e5;
+}
+
+.radio-group input[type="radio"] {
+    margin-right: 0.5rem;
+    width: 18px;
+    height: 18px;
+    accent-color: #4f46e5;
+}
+
+.radio-group label.selected {
+    background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+    color: white;
+    box-shadow: 0 4px 6px rgba(79, 70, 229, 0.2);
+}
+
+.download-btn {
+    padding: 2rem 4rem;
+    background: #87ceeb;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.75rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 2rem;
+    width: 70%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.audio-downloader .download-btn {
+    padding: 2rem 4rem;
+    background: #1841d5;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.75rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 2rem;
+    width: 70%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.download-btn:hover {
+    background: hsl(235, 100%, 50%);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.download-btn:disabled {
+    background: #b0c4de;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.status {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+.status.success {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.status.error {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.progress-bar {
+    width: 100%;
+    max-width: 400px;
+    height: 8px;
+    background: #e5e7eb;
+    border-radius: 4px;
+    margin: 1rem 0;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background: #4f46e5;
+    border-radius: 4px;
+    transition: width 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .audio-downloader {
+        padding: 1rem;
+    }
+
+    .radio-group {
+        grid-template-columns: 1fr;
+    }
+
+    .quality-options h3 {
+        font-size: 1.25rem;
+    }
+
+    .download-btn {
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+        
+    }
+}
+
+.fullscreen-section {
+    width: 90%;
+    min-height: 100vh;
+    padding: 2rem 0rem;
+    background: linear-gradient(135deg, hwb(230 28% 10%), #3ac3ed);
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 16px;
+    margin-top: 2rem;
+}
+
+.fullscreen-section h3 {
+    font-size: 5rem;
+    color: #ffffff;
+    margin-bottom: 2rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.fullscreen-section ol,
+.fullscreen-section ul {
+    margin: 0;
+    padding: 0 2rem;
+    color: #e0e7ff;
+    font-size: 1.5rem;
+    line-height: 2;
+    text-align: left;
+    max-width: 800px;
+}
+
+.fullscreen-section li {
+    margin-bottom: 1rem;
+    position: relative;
+    padding-left: 3rem;
+}
+
+.fullscreen-section li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #10b981;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.fullscreen-section ul li {
+    list-style-type: none;
+}
+
+.fullscreen-section a {
+    color: #10b981;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.fullscreen-section a:hover {
+    color: #059669;
+}
+
+.fullscreen-section .button {
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    background: #10b981;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.25rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.fullscreen-section .button:hover {
+    background: #059669;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,187 @@
+.thumbnail-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15rem;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.fetch-btn {
+    padding: 2rem 4rem;
+    background: #4f46e5;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 2rem;
+}
+
+.fetch-btn:hover {
+    background: #4338ca;
+    transform: translateY(-2px);
+}
+
+.fetch-btn:disabled {
+    background: #9ca3af;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.thumbnail-preview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 600px;
+}
+
+.thumbnail-preview img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.download-btn {
+    padding: 0.75rem 1.5rem;
+    background: #10b981;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.download-btn:hover {
+    background: #059669;
+    transform: translateY(-2px);
+}
+
+.status {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+.status.success {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.status.error {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+@media (max-width: 768px) {
+    .thumbnail-container {
+        padding: 1rem;
+    }
+
+    .fetch-btn {
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    .thumbnail-preview img {
+        max-width: 100%;
+    }
+}
+
+/* Fullscreen Section */
+.fullscreen-section {
+    width: 90%; /* Full width of the viewport */
+    min-height: 100vh; /* Full height of the viewport */
+    padding: 2rem 0rem; /* Add padding for spacing */
+    background: linear-gradient(135deg, hwb(230 28% 10%), #3ac3ed); /* Gradient background */
+    color: black; /* Black text for contrast */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    text-align: center;
+    border-radius: 16px; /* Rounded corners */
+    margin-top: 2rem; /* Add spacing above the section */
+}
+
+.fullscreen-section h3 {
+    font-size: 5rem; /* Larger font size for headings */
+    color: #ffffff; /* White text for headings */
+    margin-bottom: 2rem; /* Add spacing below the heading */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Add text shadow for better readability */
+}
+
+.fullscreen-section ol,
+.fullscreen-section ul {
+    margin: 0;
+    padding: 0 2rem;
+    color: #e0e7ff; /* Light text color for lists */
+    font-size: 1.5rem; /* Increase font size for readability */
+    line-height: 2; /* Add line height for better spacing */
+    text-align: left; /* Align text to the left */
+    max-width: 800px; /* Limit the width of the content */
+}
+
+.fullscreen-section li {
+    margin-bottom: 1rem; /* Add spacing between list items */
+    position: relative;
+    padding-left: 3rem; /* Add padding for the bullet icon */
+}
+
+.fullscreen-section li::before {
+    content: "✔"; /* Add a checkmark icon */
+    position: absolute;
+    left: 0;
+    color: #10b981; /* Green color for the icon */
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.fullscreen-section ul li {
+    list-style-type: none; /* Remove default bullet points */
+}
+
+.fullscreen-section a {
+    color: #10b981; /* Green color for links */
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.fullscreen-section a:hover {
+    color: #059669; /* Darker green on hover */
+}
+
+.fullscreen-section .button {
+    margin-top: 2rem; /* Add spacing above the button */
+    padding: 1rem 2rem;
+    background: #10b981; /* Green background for the button */
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.25rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+}
+
+.fullscreen-section .button:hover {
+    background: #059669; /* Darker green on hover */
+    transform: translateY(-2px); /* Add hover effect */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Add hover shadow */
+}
